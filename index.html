@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flamenco Pizza & Crêperie - Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(rgba(10, 10, 10, 0.82), rgba(10, 10, 10, 0.88)), 
+                  url('40770.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(140, 40, 31, 0.85);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      text-align: center;
+      padding: 30px 15px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #f7d070;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      font-family: 'Playfair Display', serif;
+      color: #f7d070;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.95;
+      margin-top: 5px;
+      font-style: italic;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 15px;
+    }
+
+    .category-title {
+      font-size: 1.4rem;
+      margin: 35px 0 18px;
+      color: #f7d070;
+      border-bottom: 2px solid #f7d070;
+      padding-bottom: 8px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .category-title.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      display: flex;
+      padding: 16px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-out;
+    }
+
+    .product-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-info {
+      flex: 1;
+    }
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .product-desc {
+      font-size: 0.82rem;
+      color: #dddddd;
+      font-style: italic;
+    }
+
+    .price-tag {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f7d070;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(247, 208, 112, 0.3);
+      white-space: nowrap;
+    }
+
+    .prices-multi {
+      display: flex;
+      gap: 8px;
+    }
+
+    .prices-multi span {
+      font-size: 0.85rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(247, 208, 112, 0.2);
+      color: #fff;
+    }
+
+    .prices-multi b {
+      color: #f7d070;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Flamenco Pizza & Crêperie</h1>
+    <p>Chez Wajdi Bechhidia — Tout est fait au feu de bois 🍕🥞</p>
+  </header>
+
+  <div class="container">
+
+    <!-- 1. NOS PIZZAS AU FEU DE BOIS -->
+    <h2 class="category-title">🍕 Nos Pizzas (Au Feu de Bois)</h2>
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Thon</div></div>
+        <div class="prices-multi"><span>Moy: <b>10.000 DT</b></span><span>Large: <b>13.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Escalope</div></div>
+        <div class="prices-multi"><span>Moy: <b>11.000 DT</b></span><span>Large: <b>14.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Margherita</div></div>
+        <div class="prices-multi"><span>Moy: <b>8.000 DT</b></span><span>Large: <b>11.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">4 Saisons</div></div>
+        <div class="prices-multi"><span>Moy: <b>12.000 DT</b></span><span>Large: <b>15.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">4 Fromages</div></div>
+        <div class="prices-multi"><span>Moy: <b>13.000 DT</b></span><span>Large: <b>16.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Double Pâtes</div></div>
+        <div class="prices-multi"><span>Moy: <b>14.000 DT</b></span><span>Large: <b>17.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Mexicaine</div></div>
+        <div class="prices-multi"><span>Moy: <b>15.000 DT</b></span><span>Large: <b>18.000 DT</b></span></div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Peperoni</div></div>
+        <div class="prices-multi"><span>Moy: <b>10.000 DT</b></span><span>Large: <b>13.000 DT</b></span></div>
+      </div>
+    </div>
+
+    <!-- 2. MAKLOUB -->
+    <h2 class="category-title">🌮 Makloub</h2>
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Makloub Escalope</div></div>
+        <div class="price-tag">8.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Makloub Thon</div></div>
+        <div class="price-tag">8.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Makloub Jambon</div></div>
+        <div class="price-tag">7.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info"><div class="product-title">Makloub 4 Saisons</div></div>
+        <div class="price-tag">9.500 DT</div>
+      </div>
+    </div>
+    <!-- 3. LIBANAIS / PAIN CORNET / BAGUETTE FARCIE -->
+    <h2 class="category-title">🥖 Libanais / Pain Cornet / Baguette Farcie</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Escalope</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Thon</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Jambon</div></div><div class="price-tag">8.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Champignon</div></div><div class="price-tag">8.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">4 Saisons</div></div><div class="price-tag">10.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">مشختشخ (Mshakhshakh)</div></div><div class="price-tag">11.000 DT</div></div>
+    </div>
+
+    <!-- 4. CRÊPES SALÉES -->
+    <h2 class="category-title">🥞 Crêpes Salées</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Thon Fromage</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Jambon Fromage</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Crêpe Tunisienne</div>
+          <div class="product-desc">(Thon, fromage, œuf)</div>
+        </div>
+        <div class="price-tag">7.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Crêpe Arrabiata</div>
+          <div class="product-desc">(Jambon, fromage, champignon, sauce fromage)</div>
+        </div>
+        <div class="price-tag">8.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Crêpe Flamenco</div>
+          <div class="product-desc">(Thon, jambon, scallope, champignon, 2 fromages)</div>
+        </div>
+        <div class="price-tag">12.000 DT</div>
+      </div>
+    </div>
+
+    <!-- 5. CRÊPES SUCRÉES -->
+    <h2 class="category-title">🍫 Crêpes Sucrées</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Chocolat</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Nutella</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Kinder</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Ferrero Rocher</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Oreo</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Spéculoos</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Crêpe Chocolat Banane</div></div><div class="price-tag">10.000 DT</div></div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Crêpe Flamenco</div>
+          <div class="product-desc">(3 sauces, bananes, fruits sec, boule de glace)</div>
+        </div>
+        <div class="price-tag">12.000 DT</div>
+      </div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Crêpe Tagliatelles</div>
+          <div class="product-desc">(3 sauce, Chantilly, fruits sec, boule de glace)</div>
+        </div>
+        <div class="price-tag">12.000 DT</div>
+      </div>
+    </div>
+    <!-- 6. GAUFRES -->
+    <h2 class="category-title">🧇 Gaufres</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Chocolat</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Nutella</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Kinder</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Oreo</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Spéculoos</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Ferrero Rocher</div></div><div class="price-tag">9.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gaufre Chocolat Banane</div></div><div class="price-tag">10.000 DT</div></div>
+      <div class="product-card">
+        <div class="product-info">
+          <div class="product-title">Gaufre Flamenco</div>
+          <div class="product-desc">(3 sauce, banane, fruits sec boule de glace)</div>
+        </div>
+        <div class="price-tag">12.000 DT</div>
+      </div>
+    </div>
+
+    <!-- 7. DESSERT -->
+    <h2 class="category-title">🍰 Dessert</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Fondant</div></div><div class="price-tag">5.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Dro3</div></div><div class="price-tag">3.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Gâteau</div></div><div class="price-tag">7.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Asida</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Tiramisu</div></div><div class="price-tag">6.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Banane Split</div></div><div class="price-tag">7.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Jwejem</div></div><div class="price-tag">7.000 DT</div></div>
+    </div>
+
+    <!-- 8. SUPPLEMENTS -->
+    <h2 class="category-title">🍟 Suppléments</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Frites</div></div><div class="price-tag">2.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Fromage</div></div><div class="price-tag">3.000 DT</div></div>
+    </div>
+
+    <!-- 9. BOISSONS -->
+    <h2 class="category-title">🥤 Boissons</h2>
+    <div class="menu-grid">
+      <div class="product-card"><div class="product-info"><div class="product-title">Canette</div></div><div class="price-tag">2.000 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">1/2 Soda</div></div><div class="price-tag">1.500 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Eau 1.5 L</div></div><div class="price-tag">1.500 DT</div></div>
+      <div class="product-card"><div class="product-info"><div class="product-title">Eau 0.5 L</div></div><div class="price-tag">1.000 DT</div></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© Flamenco Pizza & Crêperie — Tout droit réservé</p>
+    </footer>
+
+  <!-- JAVASCRIPT LIL ZINA W ANIMATION -->
+  <script>
+    // حركة ظهور العناصر السلسة عند التمرير (Scroll Animation)
+    document.addEventListener("DOMContentLoaded", function() {
+      const observerOptions = {
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const elements = document.querySelectorAll('.category-title, .product-card');
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
+
